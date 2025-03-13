@@ -12,8 +12,25 @@
 
     <main>
       <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <div class="container">
+        <section class="search">
+          <form class="search-form js-search-form">
+            <input
+              type="text"
+              class="search-request"
+              name="request"
+              placeholder="Search images..."
+            />
+            <button type="submit" class="search-btn">Search</button>
+          </form>
+        </section>
+      </div>
+      <p class="js-loading"></p>
+      <div class="container">
+        <section class="gallery">
+          <ul class="gallery-list js-gallery"></ul>
+        </section>
+      </div>
     </main>
 
     <load src="./partials/footer.html" />
