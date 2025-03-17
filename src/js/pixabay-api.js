@@ -1,13 +1,19 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { refs, BASE_URL, ENDPOINT, KEY, ACTIVE_CLASS } from './consts';
+import {
+  refs,
+  BASE_URL,
+  ENDPOINT,
+  KEY,
+  ACTIVE_CLASS,
+  lightbox,
+} from './consts';
 import { createCardsMarkup } from './render-functions';
 
 const handlerForm = event => {
   event.preventDefault();
   const form = event.currentTarget;
   const query = form.elements.request.value.trim();
-  console.log(query);
   if (query === '') {
     iziToast.show({
       title: 'Error',
@@ -31,6 +37,7 @@ const handlerForm = event => {
         return;
       }
       refs.gallery.innerHTML = createCardsMarkup(photos.hits);
+      lightbox.refresh();
     })
     .catch(err => {
       refs.loader.classList.remove(ACTIVE_CLASS);

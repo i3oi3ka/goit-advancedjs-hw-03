@@ -1,5 +1,4 @@
 function createCardsMarkup(photos) {
-  console.log(photos);
   return photos
     .map(
       photo =>
