@@ -4,7 +4,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const refs = {
   form: document.querySelector('.js-search-form'),
   gallery: document.querySelector('.js-gallery'),
-  loader: document.querySelector('.js-loader'),
+  loader: document.querySelector('.loader'),
 };
 
 const KEY = '49310743-65b3f3ce2dd3324f0da11ae2e';
